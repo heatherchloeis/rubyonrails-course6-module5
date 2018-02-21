@@ -39,8 +39,13 @@
       <ul class="nav navbar-nav navbar-right">
         <li id="login-dropdown" class="dropdown">
           <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
-          <span id="navbar-loginlabel">{{$ctrl.getLoginLabel()}}</span>
-          <span class="caret"></span></a>
+            <span ng-if="$ctrl.getCurrentUserImgUrl()">
+              <img style="width: 50px; height: 33px"
+                 ng-src="{{$ctrl.getCurrentUserImgUrl()}}?width=50">
+            </span>
+            <span id="navbar-loginlabel">{{$ctrl.getLoginLabel()}}</span>
+            <span class="caret"></span>
+          </a>
 
           <ul class="dropdown-menu">
             <li><sd-authn-session></sd-authn-session></li>

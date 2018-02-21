@@ -45,6 +45,17 @@
           ng-hide="signup_form.$dirty">{{$ctrl.signupForm.errors.password_confirmation}}</span>
   </div>
 
+  <div id="signup-profile-pic" class="row col-lg-12">
+    <label class="col-xs-3 pull-left">profile pic</label>
+    <sd-image-loader
+            class="image-select"
+            result-data-uri="$ctrl.setImageContent(dataUri)">
+          <span class="invalid"
+                ng-show="signup-form['image-file'].$error.maxSize"
+                >image size is too large (max=10MB)</span>          
+    </sd-image-loader>     
+  </div>
+
   <div id="signup-controls" class="row col-lg-12">
     <button ng-hide="$ctrl.id"
             ng-disabled="signup_form.$invalid"

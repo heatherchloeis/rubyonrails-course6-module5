@@ -14,6 +14,7 @@
     service.getCurrentUser = getCurrentUser;
     service.getCurrentUserName = getCurrentUserName;
     service.getCurrentUserId = getCurrentUserId;
+    service.getCurrentUserImgUrl = getCurrentUserImgUrl;
     service.login = login;
     service.logout = logout;
 
@@ -38,6 +39,9 @@
     }
     function getCurrentUserId() {
       return service.user!=null ? service.user.id : null;
+    }
+    function getCurrentUserImgUrl() {
+      return service.user!=null ? service.user.image_url : null;
     }
     function getCurrentUser() {
       return service.user;

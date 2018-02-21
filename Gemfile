@@ -9,6 +9,7 @@ gem 'devise_token_auth', '~>0.1', '>=0.1.39'
 gem 'pundit', '~>1.1', '>=1.1.0'
 gem 'exifr', '~> 1.2.5'
 gem 'mini_magick', '~> 4.5', '>= 4.5.1'
+gem 'bcrypt', git: 'https://github.com/codahale/bcrypt-ruby.git', :require => 'bcrypt'
 
 gem 'sass-rails', '~> 5.0', '>=3.4.22'
 gem 'uglifier', '~> 3.0', '>=3.0.2'
